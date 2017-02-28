@@ -15,3 +15,30 @@ cnpm install -g --production windows-build-tools
 cnpm install -g electron electron-reload electron-prebuilt electron-rebuild electron-packager
 
 cnpm install -g node-gyp
+
+
+编写 hello.cc 和 binding.gyp
+运行 node-gyp configure
+
+index.js 添加调用
+```
+const addon = require('./build/Release/addon');
+
+console.log(addon.hello());
+```
+或 index.html 添加
+```
+<script>
+  var addon = require("./build/Release/addon");
+  document.write(addon.hello());
+</script>
+```
+
+(npm install 编译模块)
+
+如果运行出现 Uncaught Error: The system cannot find message text for message number 0x%1 in the message file
+%2.
+
+node-gyp rebuild -target=1.4.13 -arch=ia32 -dist-url=https://atom.i
+o/download/atom-shell
+
