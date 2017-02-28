@@ -1,0 +1,16 @@
+{
+  "name": "nw",
+  "version": "1.0.0",
+  "description": "Electron NetEase Live Demo App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NetEase",
+    "Live",
+    "Douxing"
+  ],
+  "author": "southwolf",
+  "license": "ISC"
+}
