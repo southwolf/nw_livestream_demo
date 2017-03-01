@@ -1,4 +1,4 @@
-#ifndef _NLSS_TYPE_NEW_H_
+Ôªø#ifndef _NLSS_TYPE_NEW_H_
 #define _NLSS_TYPE_NEW_H_
 
 #include "nlss_define.h"
@@ -12,56 +12,56 @@ extern "C" {
 typedef  NLSS_MASK_HANDLE_TYPE(_HNLSSERVICE)  _HNLSSERVICE;
 
 /**
-*  ÷±≤•Õ∆¡˜◊¥Ã¨
+*  Áõ¥Êí≠Êé®ÊµÅÁä∂ÊÄÅ
 */
 typedef enum enum_NLSS_STATUS{
-    EN_NLSS_STATUS_INIT,                      //!< ≥ı º◊¥Ã¨
-    EN_NLSS_STATUS_START,                     //!< ÷±≤•ø™ º◊¥Ã¨
-    EN_NLSS_STATUS_ERR,                       //!< ÷±≤•≥ˆ¥Ì
-    EN_NLSS_STATUS_STOP                       //!< ÷±≤•Õ£÷π
+    EN_NLSS_STATUS_INIT,                      //!< ÂàùÂßãÁä∂ÊÄÅ
+    EN_NLSS_STATUS_START,                     //!< Áõ¥Êí≠ÂºÄÂßãÁä∂ÊÄÅ
+    EN_NLSS_STATUS_ERR,                       //!< Áõ¥Êí≠Âá∫Èîô
+    EN_NLSS_STATUS_STOP                       //!< Áõ¥Êí≠ÂÅúÊ≠¢
 }EN_NLSS_STATUS;
 
 /**
-*  ÷±≤•Õ∆¡˜ ”∆µ‘¥ƒ£ Ω£∫º¥ ”∆µÕ∆¡˜ƒ⁄»›
+*  Áõ¥Êí≠Êé®ÊµÅËßÜÈ¢ëÊ∫êÊ®°ÂºèÔºöÂç≥ËßÜÈ¢ëÊé®ÊµÅÂÜÖÂÆπ
 */
 typedef enum enum_NLSS_VIDEOIN_TYPE{
-    EN_NLSS_VIDEOIN_NONE = 0,                  //!< ≤ª≤…ºØ ”∆µ
-    EN_NLSS_VIDEOIN_CAMERA,                    //!< …„œÒÕ∑ƒ£ Ω
-    EN_NLSS_VIDEOIN_FULLSCREEN,			       //!< »´∆¡ƒ£ Ω
-    EN_NLSS_VIDEOIN_RECTSCREEN,			       //!< »Œ“‚«¯”ÚΩÿ∆¡
-    EN_NLSS_VIDEOIN_APP,					   //!< ”¶”√≥Ã–Ú¥∞ø⁄Ωÿ∆¡
-    EN_NLSS_VIDEOIN_RAWDATA,                   //!<  ”∆µ¬„ ˝æ›ƒ£ Ω
+    EN_NLSS_VIDEOIN_NONE = 0,                  //!< ‰∏çÈááÈõÜËßÜÈ¢ë
+    EN_NLSS_VIDEOIN_CAMERA,                    //!< ÊëÑÂÉèÂ§¥Ê®°Âºè
+    EN_NLSS_VIDEOIN_FULLSCREEN,			       //!< ÂÖ®Â±èÊ®°Âºè
+    EN_NLSS_VIDEOIN_RECTSCREEN,			       //!< ‰ªªÊÑèÂå∫ÂüüÊà™Â±è
+    EN_NLSS_VIDEOIN_APP,					   //!< Â∫îÁî®Á®ãÂ∫èÁ™óÂè£Êà™Â±è
+    EN_NLSS_VIDEOIN_RAWDATA,                   //!< ËßÜÈ¢ëË£∏Êï∞ÊçÆÊ®°Âºè
 }EN_NLSS_VIDEOIN_TYPE;
 
 /**
-*  ÷±≤•Õ∆¡˜“Ù∆µ‘¥ƒ£ Ω£∫º¥“Ù∆µÕ∆¡˜≤…ºØ‘¥
+*  Áõ¥Êí≠Êé®ÊµÅÈü≥È¢ëÊ∫êÊ®°ÂºèÔºöÂç≥Èü≥È¢ëÊé®ÊµÅÈááÈõÜÊ∫ê
 */
 typedef enum enum_NLSS_AUDIOIN_TYPE{
-    EN_NLSS_AUDIOIN_NONE = 0,                  //!< ≤ª≤…ºØ…˘“Ù
-    EN_NLSS_AUDIOIN_MIC,                       //!< ¬ÛøÀ∑Áƒ£ Ω
-    EN_NLSS_AUDIOIN_SYS,                       //!< windowsœµÕ≥…˘“Ù
-    EN_NLSS_AUDIOIN_RAWDATA                   //!< “Ù∆µ¡˜¬„ ˝æ›ƒ£ Ω
+    EN_NLSS_AUDIOIN_NONE = 0,                  //!< ‰∏çÈááÈõÜÂ£∞Èü≥
+    EN_NLSS_AUDIOIN_MIC,                       //!< È∫¶ÂÖãÈ£éÊ®°Âºè
+    EN_NLSS_AUDIOIN_SYS,                       //!< windowsÁ≥ªÁªüÂ£∞Èü≥
+    EN_NLSS_AUDIOIN_RAWDATA                   //!< Èü≥È¢ëÊµÅË£∏Êï∞ÊçÆÊ®°Âºè
 }EN_NLSS_AUDIOIN_TYPE;
 
 /**
-*  ÷±≤•Õ∆¡˜¡˜∏Ò Ω£∫FLV£¨RTMP
+*  Áõ¥Êí≠Êé®ÊµÅÊµÅÊ†ºÂºèÔºöFLVÔºåRTMP
 */
 typedef enum enum_NLSS_OUTFORMAT{
-    EN_NLSS_OUTFORMAT_FLV,                    //!< FLV¡˜∂‘œÛ ‰≥ˆ
-    EN_NLSS_OUTFORMAT_RTMP					//!< RTMP¡˜∂‘œÛ ‰≥ˆ
+    EN_NLSS_OUTFORMAT_FLV,                    //!< FLVÊµÅÂØπË±°ËæìÂá∫
+    EN_NLSS_OUTFORMAT_RTMP					//!< RTMPÊµÅÂØπË±°ËæìÂá∫
 }EN_NLSS_OUTFORMAT;
 
 /**
-*  ÷±≤•Õ∆¡˜¡˜ƒ⁄»›£∫“Ù ”∆µ¡˜
+*  Áõ¥Êí≠Êé®ÊµÅÊµÅÂÜÖÂÆπÔºöÈü≥ËßÜÈ¢ëÊµÅ
 */
 typedef enum enum_NLSS_OUTCONTENT{
-    EN_NLSS_OUTCONTENT_AUDIO = 0x01,            //!< ∑¢ÀÕ“Ù∆µ¡˜
-    EN_NLSS_OUTCONTENT_VIDEO = 0x02,			//!< ∑¢ÀÕ ”∆µ¡˜
-    EN_NLSS_OUTCONTENT_AV = 0x03			    //!< ∑¢ÀÕ“Ù ”∆µ¡˜
+    EN_NLSS_OUTCONTENT_AUDIO = 0x01,            //!< ÂèëÈÄÅÈü≥È¢ëÊµÅ
+    EN_NLSS_OUTCONTENT_VIDEO = 0x02,			//!< ÂèëÈÄÅËßÜÈ¢ëÊµÅ
+    EN_NLSS_OUTCONTENT_AV = 0x03			    //!< ÂèëÈÄÅÈü≥ËßÜÈ¢ëÊµÅ
 }EN_NLSS_OUTCONTENT;
 
 /**
-*  ÷±≤• ”∆µ±‡¬Î∏Ò Ω
+*  Áõ¥Êí≠ËßÜÈ¢ëÁºñÁ†ÅÊ†ºÂºè
 */
 typedef enum enum_NLSS_VIDEOOUT_CODEC{
     EN_NLSS_VIDEOOUT_CODEC_H264,
@@ -70,7 +70,7 @@ typedef enum enum_NLSS_VIDEOOUT_CODEC{
 }EN_NLSS_VIDEOOUT_CODEC;
 
 /**
-*  ÷±≤•“Ù∆µ±‡¬Î∏Ò Ω
+*  Áõ¥Êí≠Èü≥È¢ëÁºñÁ†ÅÊ†ºÂºè
 */
 typedef enum enum_NLSS_AUDIOOUT_CODEC{
     EN_NLSS_AUDIOOUT_CODEC_AAC,
@@ -78,18 +78,18 @@ typedef enum enum_NLSS_AUDIOOUT_CODEC{
 }EN_NLSS_AUDIOOUT_CODEC;
 
 /**
-*  ÷±≤• ”∆µ¡˜÷ ¡ø
+*  Áõ¥Êí≠ËßÜÈ¢ëÊµÅË¥®Èáè
 */
 typedef enum enum_NLSS_VIDEOQUALITY_LVL{
-    EN_NLSS_VIDEOQUALITY_LOW,                    //!<  ”∆µ∑÷±Ê¬ £∫µÕ«Â.
-    EN_NLSS_VIDEOQUALITY_MIDDLE,                 //!<  ”∆µ∑÷±Ê¬ £∫±Í«Â.
-    EN_NLSS_VIDEOQUALITY_HIGH,                   //!<  ”∆µ∑÷±Ê¬ £∫∏ﬂ«Â.
-    EN_NLSS_VIDEOQUALITY_SUPER,                  //!<  ”∆µ∑÷±Ê¬ £∫≥¨«Â.
-    EN_NLSS_VIDEOQUALITY_INVALID                 //!<  ”∆µ∑÷±Ê¬ £∫Œﬁ–ß÷µ
+    EN_NLSS_VIDEOQUALITY_LOW,                    //!< ËßÜÈ¢ëÂàÜËæ®ÁéáÔºö‰ΩéÊ∏Ö.
+    EN_NLSS_VIDEOQUALITY_MIDDLE,                 //!< ËßÜÈ¢ëÂàÜËæ®ÁéáÔºöÊ†áÊ∏Ö.
+    EN_NLSS_VIDEOQUALITY_HIGH,                   //!< ËßÜÈ¢ëÂàÜËæ®ÁéáÔºöÈ´òÊ∏Ö.
+    EN_NLSS_VIDEOQUALITY_SUPER,                  //!< ËßÜÈ¢ëÂàÜËæ®ÁéáÔºöË∂ÖÊ∏Ö.
+    EN_NLSS_VIDEOQUALITY_INVALID                 //!< ËßÜÈ¢ëÂàÜËæ®ÁéáÔºöÊó†ÊïàÂÄº
 }EN_NLSS_VIDEOQUALITY_LVL;
 
 /**
-*  µ± ”∆µ¡˜Œ™”√ªß≤…ºØ ±£¨º¥EN_NLSS_AUDIOIN_RAWDATA ±£¨ ‰»Îµƒ ”∆µ¡˜∏Ò Ω
+*  ÂΩìËßÜÈ¢ëÊµÅ‰∏∫Áî®Êà∑ÈááÈõÜÊó∂ÔºåÂç≥EN_NLSS_AUDIOIN_RAWDATAÊó∂ÔºåËæìÂÖ•ÁöÑËßÜÈ¢ëÊµÅÊ†ºÂºè
 */
 typedef enum enum_NLSS_VIDEOIN_FMT{
     EN_NLSS_VIDEOIN_FMT_NV12 = 0,
@@ -104,7 +104,7 @@ typedef enum enum_NLSS_VIDEOIN_FMT{
 }EN_NLSS_VIDEOIN_FMT;//custom videoin rawdata input source format
 
 /**
-*  µ±“Ù∆µ¡˜Œ™”√ªß≤…ºØ ±£¨º¥EN_NLSS_AUDIOIN_RAWDATA ±£¨ ‰»Îµƒ“Ù∆µ¡˜∏Ò Ω
+*  ÂΩìÈü≥È¢ëÊµÅ‰∏∫Áî®Êà∑ÈááÈõÜÊó∂ÔºåÂç≥EN_NLSS_AUDIOIN_RAWDATAÊó∂ÔºåËæìÂÖ•ÁöÑÈü≥È¢ëÊµÅÊ†ºÂºè
 */
 typedef enum enum_NLSS_AUDIOIN_FMT{
     EN_NLSS_AUDIOIN_FMT_NONE = -1,
@@ -124,20 +124,20 @@ typedef enum enum_NLSS_AUDIOIN_FMT{
 }EN_NLSS_AUDIOIN_FMT; //custom audioin rawdata input source format
 
 /**
-*  ÷±≤• ”∆µ‘¥Œ™…„œÒÕ∑ƒ£ Ω ±£¨º¥£∫EN_NLSS_VIDEOIN_CAMERA£¨ ‰»Î≤Œ ˝
+*  Áõ¥Êí≠ËßÜÈ¢ëÊ∫ê‰∏∫ÊëÑÂÉèÂ§¥Ê®°ÂºèÊó∂ÔºåÂç≥ÔºöEN_NLSS_VIDEOIN_CAMERAÔºåËæìÂÖ•ÂèÇÊï∞
 */
 typedef struct struct_NLSS_CAMERA_PARAM
 {
-    char               *paDevicePath;    //!< camera∂‘œÛ.
-    EN_NLSS_VIDEOQUALITY_LVL  enLvl;           //!<  ”∆µ∑÷±Ê¬ 
+    char               *paDevicePath;    //!< cameraÂØπË±°.
+    EN_NLSS_VIDEOQUALITY_LVL  enLvl;           //!< ËßÜÈ¢ëÂàÜËæ®Áéá
 } ST_NLSS_CAMERA_PARAM;
 
 /**
-*  ÷±≤• ”∆µ‘¥Œ™»Œ“‚∆¡ƒª«¯”Úƒ£ Ω ±£¨º¥£∫EN_NLSS_VIDEOIN_RECTSCREEN£¨ ‰»Î≤Œ ˝
+*  Áõ¥Êí≠ËßÜÈ¢ëÊ∫ê‰∏∫‰ªªÊÑèÂ±èÂπïÂå∫ÂüüÊ®°ÂºèÊó∂ÔºåÂç≥ÔºöEN_NLSS_VIDEOIN_RECTSCREENÔºåËæìÂÖ•ÂèÇÊï∞
 */
 typedef struct struct_NLSS_RECTSCREEN_PARAM
 {
-    int iRectLeft;                            //!<’Î∂‘»Œ“‚«¯”ÚΩÿ∆¡ƒ£ Ω£¨…Ë÷√Ωÿ∆¡«¯”Úµƒµ„Œª÷√
+    int iRectLeft;                            //!<ÈíàÂØπ‰ªªÊÑèÂå∫ÂüüÊà™Â±èÊ®°ÂºèÔºåËÆæÁΩÆÊà™Â±èÂå∫ÂüüÁöÑÁÇπ‰ΩçÁΩÆ
     int iRectRight;
     int iRectTop;
     int iRectBottom;
@@ -146,40 +146,40 @@ typedef struct struct_NLSS_RECTSCREEN_PARAM
 
 typedef struct struct_NLSS_APPVIDEO_PARAM
 {
-    char    *paAppPath;    //!< App∂‘œÛ.
+    char    *paAppPath;    //!< AppÂØπË±°.
 } ST_NLSS_APPVIDEO_PARAM;
 
 /**
-*  ÷±≤• ”∆µ‘¥Œ™ ”∆µ¬„ ˝æ›ƒ£ Ω ±£¨º¥£∫EN_NLSS_VIDEOIN_RAWDATA£¨ ‰»Î≤Œ ˝
+*  Áõ¥Êí≠ËßÜÈ¢ëÊ∫ê‰∏∫ËßÜÈ¢ëË£∏Êï∞ÊçÆÊ®°ÂºèÊó∂ÔºåÂç≥ÔºöEN_NLSS_VIDEOIN_RAWDATAÔºåËæìÂÖ•ÂèÇÊï∞
 */
 typedef struct struct_NLSS_CUSTOMVIDEO_PARAM
 {
-    int                 iInWidth;            //!< ‰»Î‘¥µƒøÌ
-    int                 iInHeight;           //!< ‰»Î‘¥µƒ∏ﬂ
-    int                 iYStride;            //!<µ± ‰»Î‘¥Œ™yuv ˝æ› ±£¨iYtride–≈œ¢
-    int                 iUVStride;           //!<µ± ‰»Î‘¥Œ™yuv ˝æ› ±£¨iUVstride–≈œ¢
-    EN_NLSS_VIDEOIN_FMT enVideoInFmt;        //!<µ± ‰»Î‘¥Œ™yuv ˝æ› ±£¨ ”∆µ∏Ò Ω
+    int                 iInWidth;            //!<ËæìÂÖ•Ê∫êÁöÑÂÆΩ
+    int                 iInHeight;           //!<ËæìÂÖ•Ê∫êÁöÑÈ´ò
+    int                 iYStride;            //!<ÂΩìËæìÂÖ•Ê∫ê‰∏∫yuvÊï∞ÊçÆÊó∂ÔºåiYtride‰ø°ÊÅØ
+    int                 iUVStride;           //!<ÂΩìËæìÂÖ•Ê∫ê‰∏∫yuvÊï∞ÊçÆÊó∂ÔºåiUVstride‰ø°ÊÅØ
+    EN_NLSS_VIDEOIN_FMT enVideoInFmt;        //!<ÂΩìËæìÂÖ•Ê∫ê‰∏∫yuvÊï∞ÊçÆÊó∂ÔºåËßÜÈ¢ëÊ†ºÂºè
 } ST_NLSS_CUSTOMVIDEO_PARAM;
 
 /**
-*  ÀÆ”°≤Œ ˝
+*  Ê∞¥Âç∞ÂèÇÊï∞
 */
 typedef struct stru_NLSS_VIDEO_WATER_PARAM{
-    char                *pucFilePath;  //!<ÀÆ”°µƒŒƒº˛¬∑æ∂
-    unsigned int         uiStartx;     //!<ÀÆ”°µƒ∆ ºX◊¯±Í
-    unsigned int         uiStarty;     //!<ÀÆ”°µƒ∆ ºY◊¯±Í
+    char                *pucFilePath;  //!<Ê∞¥Âç∞ÁöÑÊñá‰ª∂Ë∑ØÂæÑ
+    unsigned int         uiStartx;     //!<Ê∞¥Âç∞ÁöÑËµ∑ÂßãXÂùêÊ†á
+    unsigned int         uiStarty;     //!<Ê∞¥Âç∞ÁöÑËµ∑ÂßãYÂùêÊ†á
 } ST_NLSS_VIDEO_WATER_PARAM;
 
 /**
-*  ÷±≤•Õ∆¡˜ ”∆µ≤Œ ˝
+*  Áõ¥Êí≠Êé®ÊµÅËßÜÈ¢ëÂèÇÊï∞
 */
 typedef struct struct_NLSS_VIDEO_PARAM
 {
-    int                           iOutFps;           //!<  ”∆µµƒ÷°¬ .
-    int                           iOutBitrate;       //!< ¬Î¬ .
-    EN_NLSS_VIDEOOUT_CODEC        enOutCodec;        //!<  ”∆µ±‡¬Î∆˜.
-    EN_NLSS_VIDEOIN_TYPE          enInType;          //!<  ”∆µ‘¥¿‡–Õ
-    bool                          bHardEncode;       //!<  «∑Ò π”√ ”∆µ”≤º˛±‡¬Î
+    int                           iOutFps;           //!< ËßÜÈ¢ëÁöÑÂ∏ßÁéá.
+    int                           iOutBitrate;       //!< Á†ÅÁéá.
+    EN_NLSS_VIDEOOUT_CODEC        enOutCodec;        //!< ËßÜÈ¢ëÁºñÁ†ÅÂô®.
+    EN_NLSS_VIDEOIN_TYPE          enInType;          //!< ËßÜÈ¢ëÊ∫êÁ±ªÂûã
+    bool                          bHardEncode;       //!< ÊòØÂê¶‰ΩøÁî®ËßÜÈ¢ëÁ°¨‰ª∂ÁºñÁ†Å
     union
     {
         ST_NLSS_CAMERA_PARAM      stInCamera;
@@ -190,49 +190,49 @@ typedef struct struct_NLSS_VIDEO_PARAM
 } ST_NLSS_VIDEO_PARAM;
 
 /**
-*  ÷±≤•Õ∆¡˜“Ù∆µ≤Œ ˝
+*  Áõ¥Êí≠Êé®ÊµÅÈü≥È¢ëÂèÇÊï∞
 */
 typedef struct struct_NLSS_AUDIO_PARAM
 {
-    EN_NLSS_AUDIOIN_TYPE   enInType;              //!< “Ù∆µÕ∆¡˜≤…ºØ‘¥
-    const char            *paaudioDeviceName;     //!< µ±“Ù∆µÕ∆¡˜≤…ºØ‘¥¬ÛøÀ∑Á ±£¨EN_NLSS_AUDIOIN_MIC£¨–Ë…Ë÷√£¨º¥Œ™¬ÛøÀ∑Á…Ë±∏√˚≥∆£¨Õ®π˝
-    EN_NLSS_AUDIOOUT_CODEC enOutcodec;            //!< “Ù∆µ±‡¬Î∆˜.
-    int                    iInSamplerate;         //!< “Ù∆µµƒ—˘±æ≤…ºØ¬ . ≤Œøº÷µ£∫44100
-    int                    iInNumOfChannels;      //!< “Ù∆µ≤…ºØµƒÕ®µ¿ ˝£∫µ•…˘µ¿£¨À´…˘µ¿. ≤Œøº÷µ£∫1
-    int                    iInFrameSize;          //!< “Ù∆µ≤…ºØµƒ√ø÷°¥Û–°. ≤Œøº÷µ£∫2048
-    int                    iOutBitrate;           //!< “Ù∆µ±‡¬Î¬Î¬ . ≤Œøº÷µ£∫64000
-    int                    iInBitsPerSample;      //!< “Ù∆µµ•—˘±æŒª ˝  
-    EN_NLSS_AUDIOIN_FMT    enInFmt;               //!< “Ù∆µ ‰»Î∏Ò Ω£¨≤Œøº÷µ£∫EN_NLSS_AUDIOIN_FMT_S16
-    bool                   bHardEncode;           //!<  «∑Ò π”√ ”∆µ”≤º˛±‡¬Î 
+    EN_NLSS_AUDIOIN_TYPE   enInType;              //!< Èü≥È¢ëÊé®ÊµÅÈááÈõÜÊ∫ê
+    const char            *paaudioDeviceName;     //!< ÂΩìÈü≥È¢ëÊé®ÊµÅÈááÈõÜÊ∫êÈ∫¶ÂÖãÈ£éÊó∂ÔºåEN_NLSS_AUDIOIN_MICÔºåÈúÄËÆæÁΩÆÔºåÂç≥‰∏∫È∫¶ÂÖãÈ£éËÆæÂ§áÂêçÁß∞ÔºåÈÄöËøá
+    EN_NLSS_AUDIOOUT_CODEC enOutcodec;            //!< Èü≥È¢ëÁºñÁ†ÅÂô®.
+    int                    iInSamplerate;         //!< Èü≥È¢ëÁöÑÊ†∑Êú¨ÈááÈõÜÁéá. ÂèÇËÄÉÂÄºÔºö44100
+    int                    iInNumOfChannels;      //!< Èü≥È¢ëÈááÈõÜÁöÑÈÄöÈÅìÊï∞ÔºöÂçïÂ£∞ÈÅìÔºåÂèåÂ£∞ÈÅì. ÂèÇËÄÉÂÄºÔºö1
+    int                    iInFrameSize;          //!< Èü≥È¢ëÈááÈõÜÁöÑÊØèÂ∏ßÂ§ßÂ∞è. ÂèÇËÄÉÂÄºÔºö2048
+    int                    iOutBitrate;           //!< Èü≥È¢ëÁºñÁ†ÅÁ†ÅÁéá. ÂèÇËÄÉÂÄºÔºö64000
+    int                    iInBitsPerSample;      //!< Èü≥È¢ëÂçïÊ†∑Êú¨‰ΩçÊï∞  
+    EN_NLSS_AUDIOIN_FMT    enInFmt;               //!< Èü≥È¢ëËæìÂÖ•Ê†ºÂºèÔºåÂèÇËÄÉÂÄºÔºöEN_NLSS_AUDIOIN_FMT_S16
+    bool                   bHardEncode;           //!< ÊòØÂê¶‰ΩøÁî®ËßÜÈ¢ëÁ°¨‰ª∂ÁºñÁ†Å 
 } ST_NLSS_AUDIO_PARAM;
 
 /**
-*  ÷±≤•Õ∆¡˜≤Œ ˝
+*  Áõ¥Êí≠Êé®ÊµÅÂèÇÊï∞
 */
 typedef struct struct_NLSS_PARAM
 {
-    EN_NLSS_OUTCONTENT        enOutContent;       //!< Õ∆¡˜¡˜ƒ⁄»›£∫“Ù ”∆µ£¨ ”∆µ£¨“Ù∆µ.
-    EN_NLSS_OUTFORMAT         enOutFormat;        //!< Õ∆¡˜¡˜µƒ∏Ò Ω£∫FLV£¨RTMP.
-    char                      *paOutUrl;          //!< ÷±≤•µÿ÷∑∂‘œÛ
-    ST_NLSS_VIDEO_PARAM       stVideoParam;       //!< Õ∆¡˜ ”∆µœ‡πÿ≤Œ ˝.
-    ST_NLSS_AUDIO_PARAM       stAudioParam;       //!< Õ∆¡˜“Ù∆µœ‡πÿ≤Œ ˝.
+    EN_NLSS_OUTCONTENT        enOutContent;       //!< Êé®ÊµÅÊµÅÂÜÖÂÆπÔºöÈü≥ËßÜÈ¢ëÔºåËßÜÈ¢ëÔºåÈü≥È¢ë.
+    EN_NLSS_OUTFORMAT         enOutFormat;        //!< Êé®ÊµÅÊµÅÁöÑÊ†ºÂºèÔºöFLVÔºåRTMP.
+    char                      *paOutUrl;          //!< Áõ¥Êí≠Âú∞ÂùÄÂØπË±°
+    ST_NLSS_VIDEO_PARAM       stVideoParam;       //!< Êé®ÊµÅËßÜÈ¢ëÁõ∏ÂÖ≥ÂèÇÊï∞.
+    ST_NLSS_AUDIO_PARAM       stAudioParam;       //!< Êé®ÊµÅÈü≥È¢ëÁõ∏ÂÖ≥ÂèÇÊï∞.
 } ST_NLSS_PARAM;
 
 /**
-*  ”∆µΩÿÕºµƒΩ·ππÃÂ≤Œ ˝
+* ËßÜÈ¢ëÊà™ÂõæÁöÑÁªìÊûÑ‰ΩìÂèÇÊï∞
 */
 typedef struct struct_NLSS_VIDEO_SAMPLER
 {
-    int           iWidth;                        //!<  ”∆µΩÿÕºÕºœÒµƒøÌ∂».
-    int           iHeight;                       //!<  ”∆µΩÿÕºÕºœÒµƒ∏ﬂ∂».
-    int           iFormat;                       //!<  ”∆µΩÿÕºÕºœÒµƒ∏Ò Ω.
-    int           iDataSize;                     //!<  ”∆µΩÿÕºÕºœÒµƒ ˝æ›¥Û–°.
-    unsigned char *puaData;                      //!<  ”∆µΩÿÕºÕºœÒµƒ ˝æ›÷∏’Î.
-    int           *piRef;                        //!< Œﬁ¬Àæµ.
+    int           iWidth;                        //!< ËßÜÈ¢ëÊà™ÂõæÂõæÂÉèÁöÑÂÆΩÂ∫¶.
+    int           iHeight;                       //!< ËßÜÈ¢ëÊà™ÂõæÂõæÂÉèÁöÑÈ´òÂ∫¶.
+    int           iFormat;                       //!< ËßÜÈ¢ëÊà™ÂõæÂõæÂÉèÁöÑÊ†ºÂºè.
+    int           iDataSize;                     //!< ËßÜÈ¢ëÊà™ÂõæÂõæÂÉèÁöÑÊï∞ÊçÆÂ§ßÂ∞è.
+    unsigned char *puaData;                      //!< ËßÜÈ¢ëÊà™ÂõæÂõæÂÉèÁöÑÊï∞ÊçÆÊåáÈíà.
+    int           *piRef;                        //!< Êó†Êª§Èïú.
 }ST_NLSS_VIDEO_SAMPLER;
 
 /**
-* …Ë±∏–≈œ¢
+* ËÆæÂ§á‰ø°ÊÅØ
 */
 typedef struct struct_NLSS_INDEVICE_INF
 {
@@ -241,41 +241,41 @@ typedef struct struct_NLSS_INDEVICE_INF
 }ST_NLSS_INDEVICE_INF;
 
 typedef struct struct_NLSS_STATS{
-	unsigned int uiVSendFrameRate;     //!<  ”∆µ∑¢ÀÕ÷°¬ –≈œ¢
-	unsigned int uiVSendBitRate;	   //!<  ”∆µ∑¢ÀÕ¬Î¬ –≈œ¢
-	unsigned int uiVSendWidth;	       //!<  ”∆µøÌ∂»–≈œ¢
-	unsigned int uiVSendHeight;	       //!<  ”∆µ∏ﬂ∂»–≈œ¢
-	unsigned int uiVSetFrameRate;	   //!<  ”∆µ…Ë÷√µƒ÷°¬ –≈œ¢
-	unsigned int uiVSetBitRate;	       //!<  ”∆µ…Ë÷√µƒ¬Î¬ –≈œ¢
-	unsigned int uiVSetWidth;		   //!<  ”∆µ…Ë÷√µƒøÌ∂»–≈œ¢
-	unsigned int uiVSetHeight;	       //!<  ”∆µ…Ë÷√µƒ∏ﬂ∂»–≈œ¢
-	unsigned int uiASendBitRate;       //!< “Ù∆µ∑¢ÀÕ¬Î¬ –≈œ¢
+	unsigned int uiVSendFrameRate;     //!< ËßÜÈ¢ëÂèëÈÄÅÂ∏ßÁéá‰ø°ÊÅØ
+	unsigned int uiVSendBitRate;	   //!< ËßÜÈ¢ëÂèëÈÄÅÁ†ÅÁéá‰ø°ÊÅØ
+	unsigned int uiVSendWidth;	       //!< ËßÜÈ¢ëÂÆΩÂ∫¶‰ø°ÊÅØ
+	unsigned int uiVSendHeight;	       //!< ËßÜÈ¢ëÈ´òÂ∫¶‰ø°ÊÅØ
+	unsigned int uiVSetFrameRate;	   //!< ËßÜÈ¢ëËÆæÁΩÆÁöÑÂ∏ßÁéá‰ø°ÊÅØ
+	unsigned int uiVSetBitRate;	       //!< ËßÜÈ¢ëËÆæÁΩÆÁöÑÁ†ÅÁéá‰ø°ÊÅØ
+	unsigned int uiVSetWidth;		   //!< ËßÜÈ¢ëËÆæÁΩÆÁöÑÂÆΩÂ∫¶‰ø°ÊÅØ
+	unsigned int uiVSetHeight;	       //!< ËßÜÈ¢ëËÆæÁΩÆÁöÑÈ´òÂ∫¶‰ø°ÊÅØ
+	unsigned int uiASendBitRate;       //!< Èü≥È¢ëÂèëÈÄÅÁ†ÅÁéá‰ø°ÊÅØ
 }ST_NLSS_STATS;
 
 typedef enum enum_NLSS_ERRCODE{
-    EN_NLSS_ERR_NO          = 0,           //!< ¥ÌŒÛ¬Î£∫’˝»∑
-    EN_NLSS_ERR_AUDIOINIT   = 2001,		   //!< ¥ÌŒÛ¬Î£∫“Ù∆µ≥ı ºªØ
-    EN_NLSS_ERR_AUDIOSTART  = 2002,		   //!< ¥ÌŒÛ¬Î£∫“Ù∆µø™ º¥´ ‰ ß∞‹
+    EN_NLSS_ERR_NO          = 0,           //!< ÈîôËØØÁ†ÅÔºöÊ≠£Á°Æ
+    EN_NLSS_ERR_AUDIOINIT   = 2001,		   //!< ÈîôËØØÁ†ÅÔºöÈü≥È¢ëÂàùÂßãÂåñ
+    EN_NLSS_ERR_AUDIOSTART  = 2002,		   //!< ÈîôËØØÁ†ÅÔºöÈü≥È¢ëÂºÄÂßã‰º†ËæìÂ§±Ë¥•
 
-    EN_NLSS_ERR_VIDEOINIT   = 3001,		   //!< ¥ÌŒÛ¬Î£∫ ”∆µ≥ı ºªØ
-    EN_NLSS_ERR_VIDEOSTART  = 3002,		   //!< ¥ÌŒÛ¬Î£∫ ”∆µø™ º¥´ ‰ ß∞‹
+    EN_NLSS_ERR_VIDEOINIT   = 3001,		   //!< ÈîôËØØÁ†ÅÔºöËßÜÈ¢ëÂàùÂßãÂåñ
+    EN_NLSS_ERR_VIDEOSTART  = 3002,		   //!< ÈîôËØØÁ†ÅÔºöËßÜÈ¢ëÂºÄÂßã‰º†ËæìÂ§±Ë¥•
 
-    EN_NLSS_ERR_NETTIMEOUT  = 4001,		   //!< ¥ÌŒÛ¬Î£∫¥ÌŒÛ
-    EN_NLSS_ERR_URLINVALID  = 4002         //!< ¥ÌŒÛ¬Î£∫urlµÿ÷∑Œﬁ–ß
+    EN_NLSS_ERR_NETTIMEOUT  = 4001,		   //!< ÈîôËØØÁ†ÅÔºöÈîôËØØ
+    EN_NLSS_ERR_URLINVALID  = 4002         //!< ÈîôËØØÁ†ÅÔºöurlÂú∞ÂùÄÊó†Êïà
 }EN_NLSS_ERRCODE;	
 
 /**
-*  @brief ÷±≤•∑¢…˙¥ÌŒÛªÿµ˜£¨µ±÷±≤•π˝≥Ã÷–∑¢…˙¥ÌŒÛ£¨Õ®÷™”¶”√≤„£¨”¶”√≤„ø…“‘◊ˆœ‡”¶µƒ¥¶¿Ì
+*  @brief Áõ¥Êí≠ÂèëÁîüÈîôËØØÂõûË∞ÉÔºåÂΩìÁõ¥Êí≠ËøáÁ®ã‰∏≠ÂèëÁîüÈîôËØØÔºåÈÄöÁü•Â∫îÁî®Â±ÇÔºåÂ∫îÁî®Â±ÇÂèØ‰ª•ÂÅöÁõ∏Â∫îÁöÑÂ§ÑÁêÜ
 *
-*  @param enStatus:  ÷±≤•◊¥Ã¨
-*  @param enErrCode: ¥ÌŒÛ¬Î
+*  @param enStatus:  Áõ¥Êí≠Áä∂ÊÄÅ
+*  @param enErrCode: ÈîôËØØÁ†Å
 */
 typedef void(*PFN_NLSS_STATUS_NTY)(EN_NLSS_STATUS enStatus, EN_NLSS_ERRCODE enErrCode);
 
 /**
-*  @brief ªÒ»°◊Ó–¬“ª÷° ”∆µΩÿÕº∫Ûµƒªÿµ˜
+*  @brief Ëé∑ÂèñÊúÄÊñ∞‰∏ÄÂ∏ßËßÜÈ¢ëÊà™ÂõæÂêéÁöÑÂõûË∞É
 *
-*  @param pstSampler ◊Ó–¬“ª÷° ”∆µΩÿÕºµƒΩ·ππÃÂ≤Œ ˝÷∏’Î
+*  @param pstSampler ÊúÄÊñ∞‰∏ÄÂ∏ßËßÜÈ¢ëÊà™ÂõæÁöÑÁªìÊûÑ‰ΩìÂèÇÊï∞ÊåáÈíà
 */
 typedef void(*PFN_NLSS_VIDEOSAMPLER_CB)(ST_NLSS_VIDEO_SAMPLER *pstSampler);
 

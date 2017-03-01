@@ -1,4 +1,4 @@
-/*
+﻿/*
 *	Author       hzzhuling15
 *	Date         2015/09/11
 *	Copyright    Hangzhou, Netease Inc.
@@ -16,273 +16,273 @@ extern "C" {
 
 /*! \file */
 
-/*******************************�豸����API����ȡ�ɹ��ɼ�����Ƶ�豸�б�*************************************/
+/*******************************设备管理API：获取可供采集音视频设备列表*************************************/
 /**
-*  ��ȡ���ö�ý���豸�б�����
+*  获取可用多媒体设备列表个数
 *
-*  @param  iVideoDeviceNum: ��Ƶ�豸���� ����
-*  @param  iAudioDeviceNum����Ƶ�豸���� ����
+*  @param  iVideoDeviceNum: 视频设备数量 出参
+*  @param  iAudioDeviceNum：音频设备数量 出参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API   NLSS_RET  Nlss_GetFreeDevicesNum(NLSS_OUT int *iVideoDeviceNum, NLSS_OUT int *iAudioDeviceNum);
 /**
-*  ��ȡ���ö�ý���豸�б����ƣ���ʱֻ֧��DShow�ɼ�����Ƶ
+*  获取可用多媒体设备列表名称，暂时只支持DShow采集音视频
 *
-*  @param  pLSVideoDevices: ��Ƶ�豸��Ϣ ����
-*  @param  pLSAudioDevices����Ƶ�豸��Ϣ ����
+*  @param  pLSVideoDevices: 视频设备信息 出参
+*  @param  pLSAudioDevices：音频设备信息 出参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API   NLSS_RET  Nlss_GetFreeDeviceInf(NLSS_OUT ST_NLSS_INDEVICE_INF *pstVideoDevices, NLSS_OUT ST_NLSS_INDEVICE_INF* pstAudioDevices);
 
 
-/*******************************��ʼ���Ͳ�������API*************************************************************/
+/*******************************初始化和参数设置API*************************************************************/
 /**
-*  ����ֱ������ʵ������������ֻ��������һ�������ֱ������ֻ����һ��
+*  创建直播推流实例，推流对象只允许存在一个，多次直播可以只调用一次
 *
-*  @param  paWorkPath:    NLSS workĿ¼(Ҫ��UTF-8����)�����workĿ¼���涯̬��������Ҫ��dll���Լ����ڸ�Ŀ¼����������־��
-*                         �������Ϊ�գ����ڵ�ǰ����Ŀ¼���� �������������顣
-*  @param  phNLSService: ֱ������ʵ�� ������
+*  @param  paWorkPath:    NLSS work目录(要求UTF-8编码)，会从work目录下面动态加载所需要的dll，以及会在该目录下面生成日志，
+*                         如果设置为空，则在当前所在目录下面 ，操作上述事情。
+*  @param  phNLSService: 直播推流实例 ，出参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET  Nlss_Create(const char *paWorkPath, NLSS_OUT _HNLSSERVICE *phNLSService);
 
 /**
-*  ��ȡsdk�汾��
+*  获取sdk版本号
 *
-*  @param  ppaVersion: �汾�ţ���Ҫ����free�����ͷţ�����
+*  @param  ppaVersion: 版本号，需要调用free进行释放，出参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API   void     Nlss_GetSDKVersion(NLSS_OUT char **ppaVersion);
 
 /**
-*  ����ֱ������ʵ�������Գ����˳�������
+*  销毁直播推流实例，可以程序退出再销毁
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 */
 EXPORTS_API  void       Nlss_Destroy(_HNLSSERVICE hNLSService);
 
 /**
-*  ��ȡֱ��Ĭ�ϲ���
-*  @param  hNLSService: ֱ������ʵ�������
-*  @param  enVideoInType�� ������Ƶ�����ͣ����
-*  @param  enAudioInType�� ������Ƶ�����ͣ����
-*  @param  pstParam: ֱ������������
+*  获取直播默认参数
+*  @param  hNLSService: 直播推流实例，入参
+*  @param  enVideoInType： 输入视频流类型，入参
+*  @param  enAudioInType： 输入音频流类型，入参
+*  @param  pstParam: 直播参数，出参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET   Nlss_GetDefaultParam(_HNLSSERVICE hNLSService, NLSS_OUT ST_NLSS_PARAM *pstParam);
 /**
-*  ��ʼ��ֱ������
-*  @param  hNLSService: ֱ������ʵ�������
-*  @param  pstParam: ֱ������
+*  初始化直播参数
+*  @param  hNLSService: 直播推流实例，入参
+*  @param  pstParam: 直播参数
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET   Nlss_InitParam(_HNLSSERVICE hNLSService, ST_NLSS_PARAM *pstParam);
 
 /**
-*  ������Ƶ������ʾ����������Ϊ��������д16,9.Ĭ������±���ԭ���ߴ�
+*  设置视频推流显示比例，如设为宽屏，则写16,9.默认情况下保持原屏尺寸
 *
-*  @param  hNLSService: ֱ������ʵ�������
-*  @param  iWideUnit iHeightUnit: �ֱ�Ϊ���߱�����λ������Ϊ��������д16,9.
+*  @param  hNLSService: 直播推流实例，入参
+*  @param  iWideUnit iHeightUnit: 分别为宽高比例单位，如设为宽屏，则写16,9.
 */
 EXPORTS_API   void     Nlss_SetVideoDisplayRatio(_HNLSSERVICE hNLSService, int iWideUnit, int iHeightUnit);
 
 /**
-*  ������Ƶˮӡ��Ĭ������ˮӡ
+*  设置视频水印，默认是无水印
 *
-*  @param  hNLSService: ֱ������ʵ�������
-*  @param  pstWaterParam: ˮӡ�����ṹ��.
+*  @param  hNLSService: 直播推流实例，入参
+*  @param  pstWaterParam: 水印参数结构体.
 */
 EXPORTS_API   void     Nlss_SetVideoWaterMark(_HNLSSERVICE hNLSService, ST_NLSS_VIDEO_WATER_PARAM *pstWaterParam);
 
 /**
-*  ������Ƶ��ͼ�ĵĻص�
+*  设置视频截图的的回调
 *
-*  @param  pFunVideoSamplerCB ��Ƶ��ͼͼ��ص�
+*  @param  pFunVideoSamplerCB 视频截图图像回调
 */
 EXPORTS_API   void     Nlss_SetVideoSamplerCB(_HNLSSERVICE hNLSService, PFN_NLSS_VIDEOSAMPLER_CB pFunVideoSamplerCB);
 
 /**
-*  ����ֱ��������״̬�ص�
+*  设置直播过程中状态回调
 *
-*  @param  pFunStatusNty ֱ��״̬֪ͨ����
+*  @param  pFunStatusNty 直播状态通知函数
 */
 EXPORTS_API   void     Nlss_SetStatusCB(_HNLSSERVICE hNLSService, PFN_NLSS_STATUS_NTY pFunStatusNty);
 
 /**
-*  ���Nlss_InitParam���õ�ֱ������
+*  清除Nlss_InitParam设置的直播参数
 *
-*  @param  hNLSService: ֱ������ʵ�������
-*  @param  pstParam: ֱ������
+*  @param  hNLSService: 直播推流实例，入参
+*  @param  pstParam: 直播参数
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API   void    Nlss_UninitParam(_HNLSSERVICE hNLSService);
 
-/*******************************��ƵԤ��API*************************************************************/
+/*******************************视频预览API*************************************************************/
 /**
-*  ����Ƿ�Ϊ�����ɼ��豸������Ƶ�ɼ�����
+*  检查是否为其他采集设备（如视频采集卡）
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return NLSS_RET true�У�falseû��
+*  @return NLSS_RET true有，false没有
 */
 EXPORTS_API  bool  Nlss_IsOtherCaptureDevice(_HNLSSERVICE hNLSService);
 
 /**
-*  �򿪲ɼ��豸�ĸ߼����ã� 
+*  打开采集设备的高级设置， 
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
-*  ע�� �ýӿڿ���ϵͳ�ᵯ���ɼ����ô��ڣ����Խ�����Nlss_IsOtherCaptureDevice��⵽֮�����û��ֶ�ѡ���Ƿ���
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
+*  注： 该接口可能系统会弹出采集配置窗口，所以建议在Nlss_IsOtherCaptureDevice检测到之后，让用户手动选择是否开启
 */
 EXPORTS_API  NLSS_RET  Nlss_OpenOtherCaptureDeviceConf(_HNLSSERVICE hNLSService);
 /**
-*  ����Ƶ�ɼ�����Ҫ����ƵԤ��ǰ���ã�����Ҫ�ı�ɼ��豸ʱ��ʱ����Ҫ��ֹͣ�����´�
+*  打开视频采集，需要在视频预览前调用，当需要改变采集设备时的时候需要先停止再重新打开
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET  Nlss_StartVideoCapture(_HNLSSERVICE hNLSService);
 
 /**
-*  �ر���Ƶ�ɼ�
+*  关闭视频采集
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API   void     Nlss_StopVideoCapture(_HNLSSERVICE hNLSService);
 
 /**
-*  ����ƵԤ��
+*  打开视频预览
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET  Nlss_StartVideoPreview(_HNLSSERVICE hNLSService);
 
 /**
-*  ��ͣ��ƵԤ��
+*  暂停视频预览
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void      Nlss_PauseVideoPreview(_HNLSSERVICE hNLSService);
 
 /**
-*  �ָ���ƵԤ��
+*  恢复视频预览
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void      Nlss_ResumeVideoPreview(_HNLSSERVICE hNLSService);
 
 /**
-*  ֹͣ��ƵԤ��
+*  停止视频预览
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void       Nlss_StopVideoPreview(_HNLSSERVICE hNLSService);
 
-/*******************************ֱ������API*************************************************************/
+/*******************************直播推流API*************************************************************/
 
 /**
-*  ����ֱ������
+*  启动直播推流
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET   Nlss_StartLiveStream(_HNLSSERVICE hNLSService);
 
 /**
-*  ֱֹͣ������
+*  停止直播推流
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void       Nlss_StopLiveStream(_HNLSSERVICE hNLSService);
 
 /**
-*  ��ͣ��Ƶֱ������
+*  暂停视频直播推流
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void       Nlss_PauseVideoLiveStream(_HNLSSERVICE hNLSService);
 /**
-*  �ָ���Ƶֱ������
+*  恢复视频直播推流
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void       Nlss_ResumeVideoLiveStream(_HNLSSERVICE hNLSService);
 
 /**
-*  ��ͣ��Ƶֱ������
+*  暂停音频直播推流
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void       Nlss_PauseAudioLiveStream(_HNLSSERVICE hNLSService);
 
 /**
-*  �ָ���Ƶֱ������
+*  恢复音频直播推流
 *
-*  @param  hNLSService: ֱ������ʵ�������
+*  @param  hNLSService: 直播推流实例，入参
 *
-*  @return ��
+*  @return 无
 */
 EXPORTS_API  void       Nlss_ResumeAudioLiveStream(_HNLSSERVICE hNLSService);
 
-/*******************************ֱ��������ʽ2 API: ����ֱ���ӿ�*************************************************************/
+/*******************************直播推流方式2 API: 裸流直播接口*************************************************************/
 /**
-*  �û�ָ����Ƶ���������ͽӿ�
+*  用户指定视频流推流发送接口
 *
-*  @param  hNLSService: ֱ������ʵ�������
-*  @param  pcVideoData: �û�ָ����Ƶ�����ݣ����
-*  @param  iLen:        ��Ƶ�����ݳ��ȣ����
+*  @param  hNLSService: 直播推流实例，入参
+*  @param  pcVideoData: 用户指定视频流数据，入参
+*  @param  iLen:        视频流数据长度，入参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API NLSS_RET    Nlss_SendCustomVideoData(_HNLSSERVICE hNLSService, char *pcVideoData, int iLen);
 
 /**
-*  �û�ָ����Ƶ���������ͽӿڣ�֧��ֱ����������Ƶ�����ز���
+*  用户指定音频流推流发送接口，支持直播过程中音频数据重采样
 *
-*  @param  hNLSService: ֱ������ʵ�������
-*  @param  pcAudioData: �û�ָ����Ƶ�����ݣ����
-*  @param  iLen:        ��Ƶ�����ݳ��ȣ����
-*  @param  iSampleRate: ��Ƶ�������ʣ�����֧���м�仯���
+*  @param  hNLSService: 直播推流实例，入参
+*  @param  pcAudioData: 用户指定音频流数据，入参
+*  @param  iLen:        音频流数据长度，入参
+*  @param  iSampleRate: 音频流采样率，我们支持中间变化入参
 *
-*  @return NLSS_RET     NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET     NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET   Nlss_SendCustomAudioData(_HNLSSERVICE hNLSService, char *pcAudioData, int iLen, int iSampleRate);
 
 /**
-*  ��ȡֱ������״̬��Ϣ
+*  获取直播推流状态信息
 *
-*  @param  hNLSService:   ֱ������ʵ�������
-*  @param  pstatistics:  ֱ������ͳ����Ϣ������
+*  @param  hNLSService:   直播推流实例，入参
+*  @param  pstatistics:  直播推流统计信息，出参
 *
-*  @return NLSS_RET NLSS_OK�ɹ���NLSS_ERRʧ��
+*  @return NLSS_RET NLSS_OK成功，NLSS_ERR失败
 */
 EXPORTS_API  NLSS_RET   Nlss_GetStaticInfo(_HNLSSERVICE hNLSService, NLSS_OUT ST_NLSS_STATS *pstStats);
 

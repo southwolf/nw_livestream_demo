@@ -4,7 +4,10 @@
   "description": "Electron NetEase Live Demo App",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "config": "node-gyp configure",
+    "build": "node-gyp rebuild -target=1.4.13 -arch=ia32 -dist-url=https://atom.io/download/atom-shell",
+    "debug": "node-gyp rebuild -d -target=1.4.13 -arch=ia32 -dist-url=https://atom.io/download/atom-shell"
   },
   "keywords": [
     "NetEase",

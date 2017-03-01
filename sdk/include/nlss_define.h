@@ -1,4 +1,4 @@
-#ifndef _NLSS_DEFINE_H_
+ï»¿#ifndef _NLSS_DEFINE_H_
 #define _NLSS_DEFINE_H_
 
 #ifdef __cplusplus
@@ -23,11 +23,11 @@ extern "C" {
 #define  NLSS_MASK_HANDLE_TYPE(_name)  struct stru_##_name##__ {int iUnused; } * 
 #define  NLSS_MASK_TYPE(_name, _type)  struct stru_##_name##_type {int iUnused; } *
 
-/***NLSS º¯Êı·µ»ØÖµ***/
+/***NLSS å‡½æ•°è¿”å›å€¼***/
 typedef  NLSS_MASK_TYPE(_RET, int)      NLSS_RET;
 #define  NLSS_OK                       (NLSS_RET)0
 #define  NLSS_ERR                      (NLSS_RET)1
-/***NLSS ³ö²Î±êÊ¶***/
+/***NLSS å‡ºå‚æ ‡è¯†***/
 #define  NLSS_OUT
 
 #ifdef __cplusplus
